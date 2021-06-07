@@ -34,10 +34,7 @@ export default {
   },
   filters: {
     md5,
-    shorten: (str) => str.slice(0, 6),
-    length: (str) => {
-      if (str.length == 0) return "111";
-    },
+    shorten: (str) => str.slice(0, 6)
   },
   created: function () {
     this.timer = setInterval(() => {
