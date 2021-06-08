@@ -17,6 +17,7 @@
   </div>
 </template>
 <script>
+// test
 import md5 from "./components/md5.js";
 export default {
   data: () => ({
@@ -24,7 +25,7 @@ export default {
     timer: null,
   }),
   methods: {
-    convertString: function (str) {
+    convertString: function(str) {
       this.input = [...str]
         .map((char) =>
           char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()
@@ -35,11 +36,8 @@ export default {
   filters: {
     md5,
     shorten: (str) => str.slice(0, 6),
-    length: (str) => {
-      if (str.length == 0) return "111";
-    },
   },
-  created: function () {
+  created: function() {
     this.timer = setInterval(() => {
       this.convertString(this.input);
     }, 60000);
